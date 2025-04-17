@@ -60,7 +60,7 @@ p {
 /* BOTÃO DE COMPRA DESTACADO */
 .btn-compra {
   background: #ff1e00;
-  color: white;
+  color: rgb(98, 34, 34);
   padding: 1rem 2.5rem;
   font-size: 1.3rem;
   border: none;
@@ -140,7 +140,7 @@ ul li::before {
 .cta {
   text-align: center;
   padding: 3rem 1.5rem;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(87, 26, 26, 0.3);
   border-radius: 12px;
 }
 
@@ -159,14 +159,14 @@ ul li::before {
 footer {
   text-align: center;
   padding: 2rem;
-  color: #fff;
+  color: #4c449c;
   background: rgba(0, 0, 0, 0.6);
   font-size: 0.9rem;
   border-top: 1px solid rgba(255,255,255,0.2);
 }
 
 footer a {
-  color: #fca311;
+  color: #3f2c80;
   font-weight: bold;
 }
 
