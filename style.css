@@ -1,4 +1,4 @@
-/* Reset básico */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -7,172 +7,185 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #fff;
-  color: #333;
+  background: linear-gradient(135deg, #ffe259, #ffa751, #ff6a00, #ff416c, #ff4b2b);
+  background-size: 600% 600%;
+  animation: backgroundShift 15s ease infinite;
+  color: #1f1f1f;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
-/* Utilitários */
+/* Animação de fundo */
+@keyframes backgroundShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 .container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
-
-a {
-  text-decoration: none;
-  transition: 0.3s ease-in-out;
+  max-width: 1140px;
+  margin: auto;
+  padding: 2rem;
 }
 
 h1, h2, h3 {
-  font-weight: 700;
-  color: #111827;
+  font-weight: 800;
+  color: #ffffff;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
 }
 
 p {
-  margin-bottom: 1rem;
   font-size: 1.1rem;
+  color: #fff;
 }
 
-/* HERO / HEADER */
+/* HEADER */
 .hero {
-  background: linear-gradient(135deg, #f43f5e, #f97316);
-  color: #fff;
   text-align: center;
   padding: 6rem 2rem;
+  background-color: rgba(0,0,0,0.4);
+  border-radius: 12px;
 }
 
 .hero h1 {
-  font-size: 3.2rem;
-  margin-bottom: 1rem;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .hero p {
-  font-size: 1.25rem;
-  max-width: 700px;
-  margin: 0 auto 2.5rem auto;
+  font-size: 1.4rem;
+  margin-bottom: 2.5rem;
 }
 
-/* Botão de ação */
-.btn-primary {
-  background-color: #10b981;
-  color: #fff;
-  padding: 1.1rem 2.5rem;
-  border-radius: 12px;
-  font-weight: bold;
-  font-size: 1.2rem;
+/* BOTÃO DE COMPRA DESTACADO */
+.btn-compra {
+  background: #ff1e00;
+  color: white;
+  padding: 1rem 2.5rem;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
   text-transform: uppercase;
-  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
-  animation: pulse 2s infinite;
-  transition: transform 0.2s;
+  font-weight: bold;
+  box-shadow: 0 0 20px rgba(255, 30, 0, 0.6);
+  animation: pulseRed 2s infinite;
+  transition: transform 0.3s;
 }
 
-.btn-primary:hover {
-  background-color: #059669;
+.btn-compra:hover {
   transform: scale(1.05);
+  background: #e60000;
 }
 
-@keyframes pulse {
+@keyframes pulseRed {
   0% {
-    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+    box-shadow: 0 0 0 0 rgba(255, 30, 0, 0.7);
   }
   70% {
-    box-shadow: 0 0 0 15px rgba(16, 185, 129, 0);
+    box-shadow: 0 0 0 25px rgba(255, 30, 0, 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+    box-shadow: 0 0 0 0 rgba(255, 30, 0, 0);
   }
 }
 
-/* Sessões */
+/* SESSÕES */
 section {
-  padding: 4rem 0;
-}
-
-.ebook, .story, .benefits, .feedback, .cta {
-  border-bottom: 1px solid #eee;
+  padding: 4rem 2rem;
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.05);
+  margin-bottom: 2rem;
+  border-radius: 10px;
 }
 
 section h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 1.5rem;
-  color: #e11d48;
 }
 
-section ul {
+ul {
   list-style: none;
-  padding-left: 0;
+  padding: 0;
 }
 
-section ul li {
-  margin-bottom: 0.75rem;
-  padding-left: 1.5rem;
+ul li {
+  font-size: 1.1rem;
+  padding-left: 1.2rem;
+  margin-bottom: 0.8rem;
   position: relative;
-  font-size: 1.05rem;
+  color: #fff;
 }
 
-section ul li::before {
-  content: "🔥";
+ul li::before {
+  content: "✅";
   position: absolute;
   left: 0;
-  color: #f97316;
-  font-weight: bold;
+  color: #0f0;
+  font-size: 1rem;
 }
 
 /* Depoimentos */
 .feedback blockquote {
-  background-color: #fef3c7;
+  background-color: rgba(255, 255, 255, 0.15);
   padding: 1.5rem;
-  border-left: 6px solid #f59e0b;
-  margin-bottom: 1.5rem;
+  border-left: 6px solid #ffffff;
+  border-radius: 8px;
   font-style: italic;
-  border-radius: 5px;
-  color: #78350f;
+  color: #fff;
+  margin-bottom: 1.5rem;
 }
 
-/* CTA */
+/* Call to Action */
 .cta {
   text-align: center;
-  background: linear-gradient(90deg, #facc15, #fb923c);
-  color: #1f2937;
-  padding: 4rem 2rem;
+  padding: 3rem 1.5rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
 }
 
 .cta h2 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   margin-bottom: 1rem;
+  color: #fff;
 }
 
 .cta p {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin-bottom: 2rem;
 }
 
 /* Rodapé */
 footer {
-  background: #111827;
-  color: #f3f4f6;
-  padding: 2rem 1rem;
   text-align: center;
+  padding: 2rem;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
   font-size: 0.9rem;
+  border-top: 1px solid rgba(255,255,255,0.2);
 }
 
-footer p {
-  margin: 0.5rem 0;
+footer a {
+  color: #fca311;
+  font-weight: bold;
 }
 
-/* Responsivo */
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsividade */
 @media (max-width: 768px) {
   .hero h1 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
 
   .cta h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
-  section {
-    padding: 2.5rem 1rem;
+  .btn-compra {
+    font-size: 1.1rem;
+    padding: 0.8rem 2rem;
   }
 }
