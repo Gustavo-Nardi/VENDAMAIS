@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background: #f9fafb;
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+.header {
+  background: linear-gradient(to right, #0f172a, #334155);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+.header h1 {
+  font-size: 3rem;
+}
+.header p {
+  margin: 20px 0;
+  font-size: 1.2rem;
+}
+.btn {
+  display: inline-block;
+  background: #facc15;
+  color: #000;
+  padding: 14px 28px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+.btn:hover {
+  background: #eab308;
+}
+.ebook {
+  background: #fff;
+  padding: 60px 20px;
+}
+.ebook .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
+.ebook-img {
+  max-width: 300px;
+  width: 100%;
+}
+.ebook-info ul {
+  margin-top: 20px;
+  list-style: none;
+}
+.ebook-info ul li::before {
+  content: "✔️ ";
+  color: #16a34a;
+  margin-right: 6px;
+}
+.autor, .beneficios {
+  background: #f1f5f9;
+  padding: 60px 20px;
+}
+.beneficios-grid {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.cta {
+  background: #fef3c7;
+  text-align: center;
+  padding: 60px 20px;
+}
+.btn-lg {
+  padding: 18px 40px;
+  font-size: 1.2rem;
+}
+.garantia {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #334155;
+}
+footer {
+  background: #1e293b;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+footer a {
+  color: #facc15;
+  text-decoration: none;
+}
